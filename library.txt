@@ -1,0 +1,12 @@
+wheel
+accelerate              
+datasets                  
+peft                       
+torch                      
+transformers               
+trl                                                                                   
+deepspeed                       
+ninja                         
+optimum                         
+sentencepiece                                     
+wandb
