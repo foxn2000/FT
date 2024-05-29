@@ -17,12 +17,12 @@ wandb.login()
 # まずCUDAが利用可能かどうかを確認
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-dolly_dataset = load_dataset("DataPilot/databricks-dolly-15k-Nyan-ja")
+dolly_dataset = load_dataset("DataPilot/databricks-dolly-15k-Nyan-ja") #使いたいデータセットを入力
 
 # 簡易化のためinputの値が空のデータに絞る
 dolly_train_dataset = dolly_dataset['train']
 
-model_name = "DataPilot/ArrowPro-7B-KillerWhale"
+model_name = "DataPilot/ArrowPro-7B-KillerWhale"#使いたいモデルを選択
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
